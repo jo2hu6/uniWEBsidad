@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Uniwebsidad.BaseDatos
 {
+
     public class CalidadContext: DbContext
     {
         public DbSet<Amistad> _Amistades { get; set; }

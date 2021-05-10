@@ -4,7 +4,6 @@ using System.Linq;
 using Uniwebsidad.BaseDatos;
 using Uniwebsidad.Models;
 using Microsoft.AspNetCore.Mvc;
-
 namespace Uniwebsidad.Controllers
 {
     public class CursoController : Controller
@@ -16,7 +15,7 @@ namespace Uniwebsidad.Controllers
             this._context = _context;
         }
 
-        public IActionResult Index(String busqueda="")
+        public IActionResult Index()
         {
             Usuario user = LoggedUser();
             var indicesDeMisCursos = _context._DetalleUsuarioCursos.Where(o => o.IdUsuario == user.Id).ToList()
